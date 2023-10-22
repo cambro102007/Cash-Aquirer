@@ -1,26 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Cash : MonoBehaviour
 {
     public Text moneyText;
     public Text mpsText;
-    public float money = 0.0f;
+    public float money;
     public float jewMps = 1.0f;
     public float stockMps = 1.0f;
     public float slaveMps = 1.0f;
+    public float nineElevenMps = 1.0f;
+    public float daenenMps = 1.0f;
+    public float pizzeriaMps = 1.0f;
+    public float tacoStandMps = 1.0f;
+    public float creditCardMps = 1.0f;
     public float mps = 1;
     private float timer = 0.0f;
     private float updateInterval = 1.0f;
 
     private void Update()
     {
-        mps = jewMps + stockMps + slaveMps;
+        mps = jewMps + stockMps + slaveMps + nineElevenMps + daenenMps + pizzeriaMps + tacoStandMps + creditCardMps;
         money += (mps * Time.deltaTime);
         money = Mathf.Round(money * 10.0f) * 0.1f;
 
