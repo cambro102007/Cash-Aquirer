@@ -21,7 +21,7 @@ public class Button : MonoBehaviour
 
             jewsOwned++;
             cash.money -= price;
-            price *= 1.4f;
+            price *= 1.3f;
             cash.jewMps += 1.0f;
             cash.jewMps *= 1.1f;
             cash.jewMps = Mathf.Round(cash.jewMps * 100.0f) * 0.01f;
@@ -42,8 +42,8 @@ public class Button : MonoBehaviour
 
             stocksOwned++;
             cash.money -= price;
-            price *= 1.2f;
-            cash.stockMps += 20f;
+            price *= 1.3f;
+            cash.stockMps += 5f;
             cash.stockMps *= 1.1f;
             cash.stockMps = Mathf.Round(cash.stockMps * 100.0f) * 0.01f;
             price = Mathf.Round(price * 10.0f) * 0.1f;
@@ -63,8 +63,8 @@ public class Button : MonoBehaviour
 
             slavesOwned++;
             cash.money -= price;
-            price *= 1.2f;
-            cash.slaveMps += 75f;
+            price *= 1.3f;
+            cash.slaveMps += 25f;
             cash.slaveMps *= 1.1f;
             cash.slaveMps = Mathf.Round(cash.slaveMps * 100.0f) * 0.01f;
             price = Mathf.Round(price * 10.0f) * 0.1f;
@@ -85,7 +85,7 @@ public class Button : MonoBehaviour
             nineElevensOwned++;
             cash.money -= price;
             price *= 1.3f;
-            cash.nineElevenMps += 250.0f;
+            cash.nineElevenMps += 150.0f;
             cash.nineElevenMps *= 1.1f;
             cash.nineElevenMps = Mathf.Round(cash.nineElevenMps * 100.0f) * 0.01f;
             price = Mathf.Round(price * 10.0f) * 0.1f;
@@ -126,7 +126,7 @@ public class Button : MonoBehaviour
 
             pizzeriasOwned++;
             cash.money -= price;
-            price *= 1.3f;
+            price *= 1.4f;
             cash.pizzeriaMps += 2000.0f;
             cash.pizzeriaMps *= 1.1f;
             cash.pizzeriaMps = Mathf.Round(cash.pizzeriaMps * 100.0f) * 0.01f;
@@ -147,7 +147,7 @@ public class Button : MonoBehaviour
 
             tacoStandsOwned++;
             cash.money -= price;
-            price *= 1.3f;
+            price *= 1.4f;
             cash.tacoStandMps += 5000.0f;
             cash.tacoStandMps *= 1.1f;
             cash.tacoStandMps = Mathf.Round(cash.tacoStandMps * 100.0f) * 0.01f;
@@ -157,7 +157,7 @@ public class Button : MonoBehaviour
     }
     public void PurchaseCreditCard()
     {
-        buttonText.text = creditCardsOwned + " TacoStands: " + FormatFloatValue(price);
+        buttonText.text = creditCardsOwned + " Credit Cards: " + FormatFloatValue(price);
         Cash cash = cashObject.GetComponent<Cash>();
         if (cash.money > price)
         {
@@ -167,7 +167,7 @@ public class Button : MonoBehaviour
             }
             creditCardsOwned++;
             cash.money -= price;
-            price *= 1.3f;
+            price *= 1.4f;
             cash.creditCardMps += 30000.0f;
             cash.creditCardMps *= 1.1f;
             cash.creditCardMps = Mathf.Round(cash.creditCardMps * 100.0f) * 0.01f;

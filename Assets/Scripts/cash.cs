@@ -15,7 +15,7 @@ public class Cash : MonoBehaviour
     public float tacoStandMps = 1.0f;
     public float creditCardMps = 1.0f;
     public float mps = 1;
-    private float timer = 0.0f;
+    private float timer;
     private float updateInterval = 1.0f;
 
     private void Update()
