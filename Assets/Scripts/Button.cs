@@ -14,11 +14,6 @@ public class Button : MonoBehaviour
         Cash cash = cashObject.GetComponent<Cash>();
         if (cash.money > price)
         {
-            if (jewsOwned == 0)
-            {
-                cash.jewMps += 1;
-            }
-
             jewsOwned++;
             cash.money -= price;
             price *= 1.3f;
@@ -35,11 +30,6 @@ public class Button : MonoBehaviour
         Cash cash = cashObject.GetComponent<Cash>();
         if (cash.money > price)
         {
-            if (stocksOwned == 0)
-            {
-                cash.stockMps += 1;
-            }
-
             stocksOwned++;
             cash.money -= price;
             price *= 1.3f;
@@ -56,15 +46,10 @@ public class Button : MonoBehaviour
         Cash cash = cashObject.GetComponent<Cash>();
         if (cash.money > price)
         {
-            if (slavesOwned == 0)
-            {
-                cash.slaveMps += 1;
-            }
-
             slavesOwned++;
             cash.money -= price;
             price *= 1.3f;
-            cash.slaveMps += 25f;
+            cash.slaveMps += 50f;
             cash.slaveMps *= 1.1f;
             cash.slaveMps = Mathf.Round(cash.slaveMps * 100.0f) * 0.01f;
             price = Mathf.Round(price * 10.0f) * 0.1f;
@@ -77,11 +62,6 @@ public class Button : MonoBehaviour
         Cash cash = cashObject.GetComponent<Cash>();
         if (cash.money > price)
         {
-            if (nineElevensOwned == 0)
-            {
-                cash.nineElevenMps += 1;
-            }
-
             nineElevensOwned++;
             cash.money -= price;
             price *= 1.3f;
@@ -98,11 +78,6 @@ public class Button : MonoBehaviour
         Cash cash = cashObject.GetComponent<Cash>();
         if (cash.money > price)
         {
-            if (daenensOwned == 0)
-            {
-                cash.daenenMps += 1;
-            }
-
             daenensOwned++;
             cash.money -= price;
             price *= 1.3f;
@@ -119,11 +94,6 @@ public class Button : MonoBehaviour
         Cash cash = cashObject.GetComponent<Cash>();
         if (cash.money > price)
         {
-            if (pizzeriasOwned == 0)
-            {
-                cash.daenenMps += 1;
-            }
-
             pizzeriasOwned++;
             cash.money -= price;
             price *= 1.4f;
@@ -140,11 +110,6 @@ public class Button : MonoBehaviour
         Cash cash = cashObject.GetComponent<Cash>();
         if (cash.money > price)
         {
-            if (tacoStandsOwned == 0)
-            {
-                cash.daenenMps += 1;
-            }
-
             tacoStandsOwned++;
             cash.money -= price;
             price *= 1.4f;
@@ -161,10 +126,6 @@ public class Button : MonoBehaviour
         Cash cash = cashObject.GetComponent<Cash>();
         if (cash.money > price)
         {
-            if (creditCardsOwned == 0)
-            {
-                cash.daenenMps += 1;
-            }
             creditCardsOwned++;
             cash.money -= price;
             price *= 1.4f;
